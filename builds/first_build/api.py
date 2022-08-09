@@ -1,0 +1,9 @@
+import requests
+
+parameters = {
+    "amount": 20,
+    "type": "boolean"
+}
+
+response = requests.get(url="https://opentdb.com/api.php", params=parameters)
+random_data = response.json()["results"]
